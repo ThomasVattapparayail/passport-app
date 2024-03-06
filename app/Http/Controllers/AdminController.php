@@ -15,12 +15,16 @@ class AdminController extends Controller
     public function viewAllUsers()
     {
         $user=Auth::user();
-        if($user->roll_id==1)
-        {
-            $users=User::all();
-        }else{
-            $users=[];
+        if($user){
+            
+            if($user->role_id==1)
+            {
+                $users=User::all();
+            }else{
+                $users=[];
+            }
         }
+        
         
         return response()->json(['data'=>$users]);
     }
