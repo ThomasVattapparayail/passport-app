@@ -19,6 +19,8 @@ class AddCustomHeaders
         $request->headers->add([
             'Accept' => 'application/json',
             'Authorization'=>\Config::get('app.passport_token'),
+            //dd()
+            
         ]);
         return $next($request);
     }

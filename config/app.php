@@ -16,9 +16,7 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
-
-    'passport_token' => env('passport_token'),
-
+    
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -30,7 +28,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -214,5 +212,19 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
+
+
+     /*
+    |--------------------------------------------------------------------------
+    | Application PASSPORT KEY
+    |--------------------------------------------------------------------------
+    |
+    | This URL is used by the console to properly generate PASSPORT KEY when using
+    | the Artisan command line tool. You should set this to the root of
+    | your application so that it is used when running Artisan tasks.
+    |
+    */
+
+    'passport_token'=>env('PASSPORT',''),
 
 ];
